@@ -228,5 +228,5 @@ http get
 """
 
 class Bot:
-    def __init__(self):
-        ...
+    def __init__(self, post):
+        self.post = post
