@@ -231,10 +231,22 @@ http get
 class Bot:
     def __init__(self, post):
         self.post = post
-        try:
-            pass
-        except:
-            pass
-        ...
-
-    ...
+        self.base = {
+            "time": "",
+            "self_id": "",
+            "post_type": "",
+            "message_type": "",
+            "sub_type": "",
+            "message_id": "",
+            "user_id": "",
+            "message": "",
+            "raw_message": "",
+            "font": "",
+            "sender": "",
+            "temp_source": ""
+        }
+        for key in self.base.keys():
+            try:
+                self.base[key] = self.post[key]
+            except KeyError:
+                print()
