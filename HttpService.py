@@ -226,3 +226,15 @@ def set_group_leave(group_id, is_dismiss='false'):
 """
 http get
 """
+
+
+class Bot:
+    def __init__(self, post):
+        self.post = post
+        try:
+            pass
+        except:
+            pass
+        ...
+
+    ...
