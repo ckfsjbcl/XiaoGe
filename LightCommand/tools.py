@@ -1,7 +1,10 @@
 """
 用来储存一些基本函数
 """
+import json
 import time
+
+import yaml
 
 
 def print_log(msg, mod):
@@ -13,3 +16,13 @@ def print_log(msg, mod):
 
 def get_time_now__():
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+
+
+def load_json__(path: str):
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.loads(f.read())
+
+
+def load_yaml__(path: str):
+    with open(path, 'r', encoding='utf-8') as f:
+        return yaml.load(f.read())
